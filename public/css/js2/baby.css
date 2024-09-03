@@ -1,0 +1,137 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.pos-container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1, h2 {
+    text-align: center;
+    color: #ff4081; 
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #ff4081; 
+    margin: 20px auto;
+    width: 50%;
+}
+
+.special-offers {
+    margin-bottom: 40px;
+}
+
+.offer-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid #ff4081;
+    border-radius: 10px;
+    background-color: #ffe6f2; 
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.offer-details h3 {
+    font-size: 24px;
+    color: #ff4081; 
+    margin-bottom: 10px;
+}
+
+.offer-details p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.offer-details button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff4081; 
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.offer-details button:hover {
+    background-color: #e3336e; 
+}
+
+.categories {
+    margin-bottom: 40px;
+}
+
+.category-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.category-card {
+    flex: 1 1 calc(25% - 20px);
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+}
+
+.category-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.category-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.category-card a {
+    text-decoration: none;
+    color: #ff4081; 
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+    border-color: #ff4081; 
+}
+
+.category-card:hover a {
+    color: #e3336e; 
+}

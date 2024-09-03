@@ -14,33 +14,33 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/hello', function () {
-//     return 'Hello World';
-// });
-// Route::get('/world', function () {
-//     return 'World';
-// });
-// Route::get('/', function () {
-//     return 'Selamat Datang';
-// });
-// Route::get('/about', function () {
-//     return 'Nama : Alyssa Tiarra B | NIM: 2241760052';
-// });
-// Route::get('/user/{alyssa}', function ($name){
-//     return 'Nama saya '.$name;
-// });
-// Route::get('/posts/{post}/comments/{comment}', function ($postID, $commentID){
-//     return 'Pos ke-'.$postID." Komentar ke-".$commentID;
-// });
-// Route::get('/articles/{id}', function ($ID){
-//     return 'Halaman artikel dengan ID '.$ID;
-// });
-// Route::get('/user/{name?}', function ($name='null'){
-//     return 'Nama saya '.$name;
-// });
-// Route::get('/user/{name?}', function ($name='John'){
-//     return 'Nama saya '.$name;
-// });
+Route::get('/hello', function () {
+    return 'Hello World';
+});
+Route::get('/world', function () {
+    return 'World';
+});
+Route::get('/', function () {
+    return 'Selamat Datang';
+});
+Route::get('/about', function () {
+    return 'Nama : Alyssa Tiarra B | NIM: 2241760052';
+});
+Route::get('/user/{alyssa}', function ($name){
+    return 'Nama saya '.$name;
+});
+Route::get('/posts/{post}/comments/{comment}', function ($postID, $commentID){
+    return 'Pos ke-'.$postID." Komentar ke-".$commentID;
+});
+Route::get('/articles/{id}', function ($ID){
+    return 'Halaman artikel dengan ID '.$ID;
+});
+Route::get('/user/{name?}', function ($name='null'){
+    return 'Nama saya '.$name;
+});
+Route::get('/user/{name?}', function ($name='John'){
+    return 'Nama saya '.$name;
+});
 
 // prak 2
 Route::get('/hello', [WelcomeController::class,'hello']);
@@ -55,11 +55,21 @@ Route::resource('photos', PhotoController::class) ->only(['index','show']);
 Route::resource('photos', PhotoController::class) -> except(['create','store','update','destroy']);
 
 // prak 3
-// Route::get('/greeting', function(){
-//     return view('hello', ['name' => 'Alyssa']);
-// });
-// Route::get('/greeting', function(){
-//     return view('blog.hello', ['name' => 'Alyssa']);
-// });
+Route::get('/greeting', function(){
+    return view('hello', ['name' => 'Alyssa']);
+});
+Route::get('/greeting', function(){
+    return view('blog.hello', ['name' => 'Alyssa']);
+});
 Route::get('/greeting', [WelcomeController::class, 'greeting'] 
 );
+
+// Tugas prak JS 2
+Route::get('/home', [WelcomeController::class,'home']);
+Route::get('/category/food-beverage', [WelcomeController::class, 'food']);
+Route::get('/category/beauty-health', [WelcomeController::class, 'beauty']);
+Route::get('/category/home-care', [WelcomeController::class, 'homecare']);
+Route::get('/category/baby-kid', [WelcomeController::class, 'baby']);
+Route::get('/user/{id}/name/{name}', function($id, $name){
+    return 'Id: '.$id."<br> Nama: ".$name;
+});

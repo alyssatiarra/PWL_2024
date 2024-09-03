@@ -33,4 +33,25 @@ class WelcomeController extends Controller
             -> with('name', 'Andi')
             -> with('occupation', 'Astronaut');
     }
+
+    // tugas
+    public function home(){
+        return view('blog.home');
+    }
+    public function food(){
+        return view('blog.food');
+    }
+    public function beauty(){
+        return view('blog.beauty');
+    }
+    public function homecare(){
+        return view('blog.homecare');
+    }
+    public function baby(){
+        return view('blog.baby');
+    }
+    public function user($ID, $name){
+        return 'ID: ' . $ID . '<br>Nama: ' . $name;
+    }
+    
 }
